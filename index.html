@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='movies'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.15/css/bulma.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/app.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-content">
+
+        <div class="container is-centered">
+          <h1 class='title'>Angular TMDB API Search</h1>
+          <h2 class'subtitle'>Enter a Movie By Title</h2>
+          <input ng-model='searchValue' type="type" placeholder='e.g. The Devil Wears Prada' name="name" value="">
+          <a ng-href="/#/search/{{searchValue}}" class='button is-primary'>Search</a>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+    </div>
+    <section class='section' ng-view>
+
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <script src="/js/controller/results.js" charset="utf-8"></script>
+    <script src="/js/controller/single.js" charset="utf-8"></script>
+  </body>
+</html>

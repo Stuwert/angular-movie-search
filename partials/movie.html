@@ -1,0 +1,8 @@
+
+    <h3>
+      <a href="/#/movies/{{movie.id}}">{{movie.title}}</a>
+    </h3>
+    <p>{{movie.release_date | date : 'LLLL'}}</p>
+    <p>{{movie.vote_average}}</p>
+  </div>
+  <img ng-src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="" />

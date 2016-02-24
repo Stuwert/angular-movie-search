@@ -1,0 +1,14 @@
+.container{
+  margin: 20px 0;
+}
+
+.notification{
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,12 +1,14 @@
-<div class='container' ng-repeat="movie in movies">
-  <div class="notification">
-    <div>
-      <h3>
-        <a href="/#/movies/{{movie.id}}">{{movie.title}}</a>
-      </h3>
-      <p>{{movie.release_date | date : 'shortDate'}}</p>
-      <p>{{movie.vote_average}}</p>
+<div class="columns">
+  <div class='container column is-3' ng-repeat="movie in movies">
+    <div class="notification">
+      <div>
+        <h3 class="title is-3">
+          <a href="/#/movies/{{movie.id}}">{{movie.title}}</a>
+        </h3>
+        <h6 class='subtitle is-6'>{{movie.release_date | date : 'shortDate'}}</h6>
+        <p><strong>Rating: {{movie.vote_average}}</strong></p>
+      </div>
+      <img ng-src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="" />
     </div>
-    <img ng-src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="" />
   </div>
 </div>

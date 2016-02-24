@@ -1,8 +1,12 @@
 
-    <h3>
-      <a href="/#/movies/{{movie.id}}">{{movie.title}}</a>
-    </h3>
-    <p>{{movie.release_date | date : 'LLLL'}}</p>
-    <p>{{movie.vote_average}}</p>
+    <img ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" />
+    <h1 class='title is-1'>{{movie.title}}</h1>
+    <h6 class='subtitle is-6'>
+      {{movie.tagline}}
+    </h6>
+    <p>{{movie.release_date | date : 'longDate'}}</p>
+    <p>Rating: <strong>{{movie.vote_average}}</strong></p>
+    <p>
+      {{movie.overview}}
+    </p>
   </div>
-  <img ng-src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="" />
